@@ -1,0 +1,63 @@
+echo "FILE COMMANSDS"
+echo "1-Removing the files (rm)"
+echo "2-Copying the file (cp)"
+echo "3-Concatenating of files (cat)"
+echo "4-Moving the files (mv)"
+echo "5-Comparing the files (cmp)"
+echo "6-Counting (wc)"
+echo "7-Spliting the files (split)"
+echo "8-Difference between files (diff)"
+echo "Enter the choice"
+read choice
+case $choice in
+1)clear
+echo "Removing the files"
+echo "List of files before removing"
+ls
+rm f1
+echo "List of files after removing"
+ls
+;;
+2)clear
+echo "Copying the files"
+echo "List of files before copying"
+ls
+cp f2 f3
+echo "List of files after copying"
+ls
+;;
+3)clear
+echo "Concatenating of files"
+cat f3 f4
+;;
+4)clear
+echo "Moving the files"
+ls
+mv f4 f3
+echo "List of files after moving"
+ls
+;;
+5)clear
+echo "Comparing the files"
+cmp f5 f6
+;;
+6)clear
+echo "Counting words"
+wc f6
+;;
+7)clear
+echo "Spliting the files"
+echo "List of files before spliting"
+ls
+echo "List of files after spliting"
+#cat f7
+split -2 f7 new
+ls
+;;
+8)clear
+echo "Difference between files"
+diff f8 f9
+;;
+*)clear
+echo "Invalid option"
+esac

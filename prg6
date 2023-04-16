@@ -1,0 +1,12 @@
+echo "To remove the files which has zero byte"
+echo ""
+echo "File before removing"
+ls
+echo ""
+echo "List of files that sized zero byte"
+find -type f -size 0
+echo ""
+find -type f -size 0 -exec rm {} \;
+echo "List of files after removing the zero byte files"
+echo ""
+ls

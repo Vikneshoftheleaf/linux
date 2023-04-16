@@ -1,0 +1,17 @@
+echo "Whether the given number is palindrome or not"
+echo "Enter the number"
+read num
+x=$num
+b=0
+while [ $num -gt 0 ]
+do
+  r=$(($num%10))
+  b=$(($b*10+$r))
+  num=$(($num/10))
+done
+if [ $x -eq $b ]
+then
+  echo "The given number is palindrome"
+else
+  echo "The given number is not a palindrome"
+fi

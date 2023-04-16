@@ -1,0 +1,29 @@
+echo "1-Current date (date)"
+echo "2-Username (whoami)"
+echo "3-List of the files (ls -l)"
+echo ""
+echo "Enter the choice"
+read choice
+case $choice in
+1)clear
+echo ""
+echo "Displaying the current date"
+echo ""
+date
+;;
+2)clear
+echo ""
+echo "Displaying the user name"
+echo ""
+whoami
+;;
+3)clear
+echo ""
+echo "Displaying the list of files"
+echo ""
+ls -l
+;;
+*)echo "Invalid option"
+esac
+
+

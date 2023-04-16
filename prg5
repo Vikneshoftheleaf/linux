@@ -1,0 +1,26 @@
+echo "Filter commands"
+echo "1-Search files for specified pattern (grep)"
+echo "2-Replace the text (tr)"
+echo "3-Extract a column (cut)"
+echo "4-Count line /words/characters (wc)"
+echo "Enter the choice"
+read choice
+if [ $choice -eq 1 ]
+then
+echo "grep command"
+grep job sample
+elif [ $choice -eq 2 ]
+then
+echo "tr command"
+tr " " ":" < sample
+elif [ $choice -eq 3 ]
+then
+echo "cut command"
+cut -d " " -f 1 sample
+elif [ $choice -eq 4 ]
+then
+echo "Counting the words"
+wc sample
+else
+echo "Invalid option"
+fi

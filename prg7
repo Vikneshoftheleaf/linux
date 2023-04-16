@@ -1,0 +1,12 @@
+echo "Sum  of individual digits"
+echo "Enter the number"
+read num
+x=$num
+s=0
+while [ $num -gt 0 ]
+do
+  r=$(($num%10))
+  sum=$(($sum+$r))
+  num=$(($num/10))
+done
+echo "Sum of the individual digits of a given number $x is $sum"

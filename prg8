@@ -1,0 +1,13 @@
+echo "Find the biggest number"
+echo " "
+n=$#
+big=$1
+for i in $(seq 2 $n)
+do
+  if [ $big -lt $2 ]
+  then
+    big=$2
+  fi
+shift
+done
+echo "The greatest number along the given set of numbers $big"

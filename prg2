@@ -1,0 +1,62 @@
+
+echo "SYSTEM CONFIGURATION DETAILS"
+echo "Shell script view system of shell's configuartion"
+echo "1-Currently logged user and log name"
+echo "2-Currently shell,home,directory,os type,path,setting current working directory"
+echo "3-Currently logged user and available shells"
+echo "4-CPU information"
+echo "5-Memory information"
+echo "Enter the choice"
+read choice
+
+if [ $choice -eq 1 ]
+	then
+	clear
+	echo ""
+	echo "Currently logged user ansd log name"
+	whoami
+elif [ $choice -eq 2 ]
+	then
+	clear
+	echo ""
+	echo "Current shell"
+	echo $SHELL
+	echo ""
+	echo "Home directory"
+	echo $HOME
+	echo "Os type"
+	uname -o
+	echo ""
+	echo "Current path settings"
+	echo $PATH
+	echo ""
+	echo "Currently working directory"
+	pwd
+
+elif [ $choice -eq 3 ]
+	then
+	clear
+	echo "Currently logged user"
+	echo ""
+	who
+	echo "List of file available shell"
+	echo ""
+	cat /etc/shells
+
+elif [ $choice -eq 4 ]
+	then
+	clear
+	echo "CPU information"
+	echo ""
+	grep "model name" /proc/cpuinfo
+
+elif [ $choice -eq 5 ]
+	then
+	clear
+	echo "Memory information"
+	echo ""
+	vmstat
+
+else
+	echo "Invalid option"
+fi

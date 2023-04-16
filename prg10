@@ -1,0 +1,14 @@
+echo "To implement the multiplication table"
+echo ""
+echo "Enter the multiplier"
+read mult
+echo "Enter the count"
+read count
+echo ""
+echo "Multiplication Table"
+echo ""
+for i in $(seq 1 $count)
+do 
+  ans=$(($i*$mult))
+  echo "$i*$mult=$ans"
+done

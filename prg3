@@ -1,0 +1,50 @@
+echo "Pipes redirection and tee command"
+echo "1-Collection of command"
+echo "2-Input redirection"
+echo "3-Output redirection"
+echo "4-Error redirection"
+echo "5-Tee command"
+echo "Enter the choice"
+read choice
+case $choice in
+1)clear
+echo "Pipes command"
+ls -l | grep "^-" | tr -s " " ";" | cut -d ";" -f1,2
+;;
+2)clear
+echo "Input redirection"
+echo ""
+cat < temp
+;;
+3)clear
+echo "Output redirection"
+echo ""
+cat temp > temp1
+echo "Output of the files after redirection"
+cat temp1
+;;
+4)clear
+echo "Error handling"
+echo ""
+cat errf1 2> error-msg
+cat < error-msg
+;;
+5)clear
+echo "Tee command"
+echo ""
+echo "The list before sort command"
+cat num
+echo ""
+echo "The List is sorted"
+sort -n num | tee num1
+echo ""
+echo "The list after sort command"
+echo ""
+echo "Intermediate output in num1"
+cat num1
+;;
+*)clear
+echo "Invalid option"
+esac
+
+
